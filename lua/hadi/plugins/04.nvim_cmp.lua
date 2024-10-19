@@ -27,7 +27,9 @@ local nvim_cmp = {
           ['<C-p>'] = cmp.mapping.select_prev_item(),
           ['<C-n>'] = cmp.mapping.select_next_item(),
           ['<C-y>'] = cmp.mapping.confirm({ select = true }), -- Confirm completion
-          ['<C-e>'] = cmp.mapping.abort(),                    -- Abort completion
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-e>'] = cmp.mapping.abort(), -- Abort completion
         },
         sources = {
           { name = 'nvim_lsp' }, -- LSP source
