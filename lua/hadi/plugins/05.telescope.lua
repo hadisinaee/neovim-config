@@ -8,6 +8,7 @@ local plugin = {
   config = function()
     require("telescope").setup({
       defaults = {
+        file_ignore_patterns = { ".git/" }, -- ignore these patterns
         prompt_prefix = "> ",
         selection_caret = "> ",
         path_display = { "smart" },
